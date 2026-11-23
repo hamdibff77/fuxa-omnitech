@@ -9,7 +9,11 @@ const { Client } = require('pg');
 const XLSX = require('xlsx');
 
 let opcua;
+// Emplacement historique (plugin FUXA), puis dependance locale du serveur.
 try { opcua = require('../../_pkg/runtime/node_modules/node-opcua'); } catch (e) { }
+if (!opcua) {
+    try { opcua = require('node-opcua'); } catch (e) { }
+}
 
 let runtime;
 let secureFnc;
