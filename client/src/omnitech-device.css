@@ -1,0 +1,244 @@
+/* ============================================================
+   Omnitech - Industrial dark UI, scoped to the /device section.
+   All FUXA components, bindings and events are kept unchanged.
+   ============================================================ */
+
+app-device {
+    --headerBackground: #1a232e;
+    --headerColor: #e8eef4;
+    --headerBorder: #344253;
+    --workPanelBackground: #0f161e;
+    --toolboxBorder: #2e3b49;
+    --formInputBackground: #111a24;
+    --formInputColor: #e8eef4;
+    --formInputBackgroundFocus: #16212d;
+    --formInputBorderFocus: #ffb020;
+}
+
+body.omnitech-device {
+    --formInputBackground: #111a24;
+    --formInputColor: #e8eef4;
+    --formInputBackgroundFocus: #16212d;
+    --formInputBorderFocus: #ffb020;
+}
+
+/* ---------------------------- Layout ---------------------------- */
+.device-shell {
+    display: grid;
+    grid-template-columns: 292px minmax(0, 1fr);
+    height: 100%;
+    background: var(--workPanelBackground);
+}
+
+.device-rail {
+    position: relative;
+    background: #151e28;
+    border-right: 1px solid #344253;
+    overflow: hidden;
+}
+
+.rail-head {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 14px;
+    background: #1a232e;
+    color: #e8eef4;
+    border-bottom: 1px solid #344253;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.rail-accent {
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    background: #ffb020;
+    box-shadow: 0 0 8px rgba(255, 176, 32, 0.55);
+}
+
+.device-rail app-connections-list {
+    display: block;
+    height: calc(100% - 36px);
+    overflow: auto;
+}
+
+.device-main {
+    position: relative;
+    min-width: 0;
+    height: 100%;
+}
+
+.device-main .header-panel {
+    text-align: left;
+    padding-left: 14px;
+}
+
+.device-main .view-tabs {
+    padding-left: 8px;
+}
+
+.device-main .view-tab-active {
+    border-bottom-color: #ffb020;
+    color: #ffcf6b !important;
+}
+
+/* --------------------- Connections overview --------------------- */
+.connections-overview {
+    position: absolute;
+    top: 73px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 18px;
+    padding: 28px;
+    background: linear-gradient(145deg, #1b2733, #131c25);
+    border: 1px solid #344253;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+    color: #e8eef4;
+}
+
+.connections-overview h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    font-weight: 650;
+    color: #ffcf6b;
+}
+
+.connections-overview p {
+    margin: 0 0 18px;
+    color: #9fb2c5;
+    font-size: 13px;
+}
+
+.overview-badges {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.overview-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid #3d4d5f;
+    background: #1e2b37;
+    color: #c7d6e5;
+    font-size: 11px;
+}
+
+.overview-badge.ok {
+    border-color: #2f6b4f;
+    background: rgba(61, 220, 151, 0.1);
+    color: #6ee7ae;
+}
+
+/* ------------------- Connection cards in rail ------------------- */
+.device-rail .connection-list-item {
+    background: #1b2632;
+    border: 1px solid #2e3c4b;
+    border-radius: 10px;
+    margin: 8px;
+    padding: 4px 6px;
+}
+
+.device-rail .connection-list-item:hover {
+    border-color: #ffb020;
+}
+
+.device-rail .connection-list-name {
+    font-weight: 600;
+    color: #ffcf6b;
+}
+
+.device-rail .connection-list-status {
+    box-shadow: 0 0 6px currentColor;
+}
+
+.device-rail .connection-tags-list {
+    border-left: 2px solid #344253;
+    margin-left: 16px;
+    padding-left: 8px;
+}
+
+/* -------------------- Tag table as cards -------------------- */
+app-device app-device-list .mat-mdc-header-row {
+    background: #1b2733;
+    margin: 8px 8px 0;
+    border-radius: 8px;
+    color: #9fb2c5;
+}
+
+app-device app-device-list .mat-mdc-row {
+    background: #17222d;
+    border: 1px solid #2e3c4b;
+    border-radius: 8px;
+    margin: 6px 8px;
+}
+
+app-device app-device-list .mat-mdc-row:hover {
+    border-color: #4a5f75;
+    background: #1b2835;
+}
+
+app-device app-device-list .mat-mdc-cell,
+app-device app-device-list .mat-mdc-header-cell {
+    border-bottom: none;
+    color: #dbe6f0;
+}
+
+app-device app-device-list .filter {
+    color: #e8eef4;
+}
+
+/* ------------------------ Device map ------------------------ */
+app-device app-device-map .device-header {
+    background: #1b2733;
+    color: #ffcf6b;
+    border: 1px solid #344253;
+    border-radius: 8px 8px 0 0;
+}
+
+app-device app-device-map .device-pro,
+app-device app-device-map .device-status {
+    background: #17222d;
+    color: #dbe6f0;
+    border-color: #2e3c4b;
+}
+
+/* --------------------------- Dialogs --------------------------- */
+body.omnitech-device .mat-mdc-dialog-container .mdc-dialog__surface {
+    background: #151e28 !important;
+    color: #e8eef4;
+    border: 1px solid #344253;
+    border-radius: 14px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+}
+
+body.omnitech-device .mat-mdc-dialog-title,
+body.omnitech-device .mat-mdc-dialog-title::before {
+    color: #ffcf6b;
+}
+
+body.omnitech-device .mat-mdc-dialog-content {
+    color: #e8eef4;
+}
+
+body.omnitech-device .mat-mdc-dialog-actions {
+    border-top: 1px solid #344253;
+}
+
+body.omnitech-device .mat-mdc-dialog-container .mat-mdc-form-field-label {
+    color: #9fb2c5;
+}
+
+body.omnitech-device .mat-mdc-dialog-container .mat-mdc-tab-body-content,
+body.omnitech-device .mat-mdc-dialog-container .mat-mdc-tab-labels {
+    color: #e8eef4;
+}
+
+body.omnitech-device .mat-mdc-dialog-container .mdc-tab--active {
+    color: #ffcf6b;
+}
