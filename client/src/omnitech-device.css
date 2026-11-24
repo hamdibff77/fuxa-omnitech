@@ -242,3 +242,25 @@ body.omnitech-device .mat-mdc-dialog-container .mat-mdc-tab-labels {
 body.omnitech-device .mat-mdc-dialog-container .mdc-tab--active {
     color: #ffcf6b;
 }
+
+/* --------- Browser de tags : cases a cocher toujours visibles --------- */
+body.omnitech-device .mat-mdc-dialog-container .item {
+    position: relative;
+}
+
+body.omnitech-device .mat-mdc-dialog-container .item-text {
+    width: calc(100% - 210px) !important;
+}
+
+body.omnitech-device .mat-mdc-dialog-container .item-property,
+body.omnitech-device .mat-mdc-dialog-container .item-info {
+    width: 110px !important;
+}
+
+body.omnitech-device .mat-mdc-dialog-container .item-check {
+    position: absolute;
+    right: 12px;
+    top: 0;
+    float: none;
+    margin-right: 0;
+}

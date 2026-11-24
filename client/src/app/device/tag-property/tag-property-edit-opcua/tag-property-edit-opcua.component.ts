@@ -21,7 +21,7 @@ export class TagPropertyEditOpcuaComponent implements OnInit, OnDestroy {
 
     config = {
         height: '640px',
-        width: '1000px'
+        width: '100%'
     };
 
     constructor(

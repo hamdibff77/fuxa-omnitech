@@ -22463,7 +22463,7 @@ let TagPropertyEditOpcuaComponent = class TagPropertyEditOpcuaComponent {
   tagType = _models_device__WEBPACK_IMPORTED_MODULE_3__.OpcUaTagType;
   config = {
     height: '640px',
-    width: '1000px'
+    width: '100%'
   };
   constructor(fb, hmiService, dialogRef, data) {
     this.fb = fb;
