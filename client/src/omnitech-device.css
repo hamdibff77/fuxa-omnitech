@@ -157,6 +157,16 @@ body.omnitech-device {
     box-shadow: 0 0 6px currentColor;
 }
 
+.device-rail .omnitech-gear {
+    color: #ffcf6b;
+    background: #1e2b37;
+    border: 1px solid #3d4d5f;
+    border-radius: 8px;
+    min-width: 32px;
+    width: 32px;
+    height: 32px;
+}
+
 .device-rail .connection-tags-list {
     border-left: 2px solid #344253;
     margin-left: 16px;
